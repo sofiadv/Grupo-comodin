@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- Font Awesome Stylesheet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <!-- Bootstrap Grid Stylesheet -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/formularios.css">
+    </head>
+<body>
+    <div class="container formulario">
+        <div >
+            <h1 class="titulo-formulario">Complete sus datos</h1>
+            <form class = "" action="/users/register" method="POST"  enctype="multipart/form-data">
+                <div class="row formulario-grande"> 
+                        <div class="">
+                            <label for="nombre" class="formulario-label">Nombre de Usuario:</label>
+                            <input type="text" name="usuario" id="nombre" class="formulario-input-usuario">
+                        </div>
+                        <div >
+                            <label for="email" class="formulario-label">Email:</label>
+                            <input type="email" name="email" id="email" class="formulario-input-usuario">
+                        </div>
+                        <div >
+                            <label for="password" class="formulario-label">Contraseña:</label>
+                            <input type="password" name="password" id="password" class="formulario-input-usuario">
+                        </div>
+                        <div >
+                            <label for="repassword" class="formulario-label">Reingrese su contraseña:</label>
+                            <input type="password" name="repassword" id="repassword" class="formulario-input-usuario">
+                        </div>
+                        <div>
+                            <button type="submit" class="registrar-boton">Crear Usuario</button>
+                        </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+</body>
+</html>

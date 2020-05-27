@@ -1,0 +1,122 @@
+body {
+    background-color: black;
+}
+
+.formulario {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .titulo-formulario {
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    color: black;
+  }
+  .formulario-grande {
+    background-color: black;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .formulario-producto{
+    background-color: black;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .formulario-label {
+    display: inline-block;
+    font-size: 1.6em;
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+    color: #EF2EEF;
+  }
+  .formulario-input-usuario {
+    display: block;
+    width: 50%;
+    height: 45px;
+    margin: auto;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    border-radius: 8px;
+    border: none;
+    border: solid 1px var(--gray);
+    padding: 0 15px;
+    text-align: center;
+  }
+  .formulario-input-producto {
+    display: block;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-radius: 8px;
+    border: none;
+    border: solid 1px var(--gray);
+    padding: 0 15px;
+  }
+  .registrar-boton {
+    background-color: #EF2EEF;
+    font-size: 1.6em;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  textarea.formulario-input-producto {
+    min-height: 140px;
+    resize: vertical;
+    padding: 15px;
+  }
+  .titulo-producto{
+    text-align: left;
+    font-weight: 400;
+    font-size: 24px;
+    margin-top: 10px;
+    color: #EF2EEF;
+  }
+  .preview-imagen{
+    width: 80%;
+    min-height: 30%;
+    border: 2px solid #EF2EEF;
+    margin: auto;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #EF2EEF;
+  }
+  .preview-imagen-texto{
+    display: none;
+  }
+  .foto-producto-boton{
+    display: block;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid #EF2EEF;
+    background-color: #EF2EEF;
+    margin: auto;
+    margin-top: 8px;
+    align-content: center;
+  }
+
+  @media (max-width: 768px) {
+
+  .formulario-input-usuario {
+      width: 100%;
+  }
+  .titulo-producto{
+    text-align: center;
+  }
+}

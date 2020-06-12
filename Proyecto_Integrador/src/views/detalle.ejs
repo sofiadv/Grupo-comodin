@@ -1,63 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="css/detalle.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle</title>
-</head>
-<body>
+<%- include('header') %>
 
-
-<div class="cuenta">
-    <div class="registro">
-        <a href="#" class="vinculo">Registrate</a>
-    </div>
-    <div class="inicio-sesion">
-        <a href="#" class="vinculo">Iniciar sesión</a>
-    </div>
-</div>
-
-    <div class="header-container">
-
-
-    <head>
-
-   <div class="logo-container"><img src="img/logo.png" alt="" class="logo">
-
-</div>
-
-<div class="carrito-lupa-container">
-<div class="lupa-container">
-
-<img src="img/lupa.png" alt="" class="lupa">
-
-</div>
-
-<div class="carrito-lupa-c">
-
-<img src="img/carrito.png" alt="" class="carrito">
-
-</div>
-</div>
-
-</head> </div>
-
-    <nav>
-<ul class="formulario">
-   <a href="#"><li>Categorias</li></a>
-   <a href="#"><li>Promos</li></a>
-   <a href="#"><li>Eventos</li></a>
-   <a href="#"><li>Contacto</li></a>
-   <a href="#"><li>Ayuda</li></a>
-</ul>
-
-    </nav>
-
-    <h1>Detalle del Producto</h1>
+<link rel="stylesheet" href="stylesheets/detalle.css">
+   
+   <h1>Detalle del Producto</h1>
     <div class="pr-media-container">
         <div class="img-pr-det-cont">
-             <img class="pr-det-img" src="./img/detalle-prod.jpg" alt="">
+             <img class="pr-det-img" src="images/fernando.jpg" alt="">
         </div>
     
     <div class="media-comprar">
@@ -66,7 +14,7 @@
     <h2 class="pr-det-nombre">$ 100</h2>
     <div class="icon-container">
     <div class="icon-img-tarj-container">
-        <img class="icon-tarjeta" src="./img/tarjeta detalle.jpg" alt="">
+        <img class="icon-tarjeta" src="images/tarjeta detalle.jpg" alt="">
     </div>
     <div class="tarjeta-txt">
     <p>Paga con tu tarjeta en hasta 12 cuotas</p>
@@ -74,7 +22,7 @@
     </div>
 <div class="icon-container">
     <div class="icon-img-container">
-    <img class="icon" src="./img/small-truck.png" alt="">
+    <img class="icon" src="images/small-truck.png" alt="">
 </div>
     <div class="envio">
     <p>Envio a domicilio</p> 
@@ -87,7 +35,7 @@
     </div>
     <div class="icon-container">
     <div class="icon-img-container">
-        <img class="icon" src="./img/star.png" alt="">
+        <img class="icon" src="images/star.png" alt="">
     </div>
         <div class="opinion-txt">
         <p>Opiniones</p>
@@ -113,7 +61,7 @@
 </div>
 <div class="interes-container">
 <div class="otros-prod">
-    <img class="img-otros-prod" src="./img/birran.jpg" alt="">
+    <img class="img-otros-prod" src="images/birran.jpg" alt="">
     <div class="extra-prod">
     <p>
         <b>Cerveza artesanal   $50</b><br>
@@ -122,7 +70,7 @@
 </div>
 </div>
 <div class="otros-prod">
-    <img class="img-otros-prod" src="./img/birran.jpg" alt="">
+    <img class="img-otros-prod" src="images/birran.jpg" alt="">
     <div class="extra-prod">
     <p>
         <b>Cerveza artesanal   $50</b><br>
@@ -132,7 +80,7 @@
 </div>
 
 <div class="otros-prod">
-    <img class="img-otros-prod" src="./img/birran.jpg" alt="">
+    <img class="img-otros-prod" src="images/birran.jpg" alt="">
     <div class="extra-prod">
     <p>
         <b>Cerveza artesanal   $50</b><br>
@@ -167,45 +115,4 @@
 </div>
 </div>
 
-    <footer>
-        
-        <h3>Locales</h3>
-  
-
-<div class="mapa">
-<a href="https://www.google.com/maps/place/Veva+SA/@-34.5699167,-58.447185,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcb5c6bb790fad:0xc1e0af0703436a48!8m2!3d-34.5699167!4d-58.4449963" class="ubicacion"><img src="img/ubicacion.png" alt="" class="google-map"> </a>
-</div>
-
-
-    <h3>Seguinos en nuestras redes</h3>
-
-<div class="redes">
-<img src="img/ig.png" alt="" class="redes-logo">
-
-<img src="img/fb.png" alt=""
-class="redes-logo">
-
-</div>
-
-
-
-
-        <h3>Horarios</h3>
-  
-    
-    <p class="horarios">
-        <b>Lunes:</b>                 12:00 - 23:30<br>
-        <b>Martes:</b>               12:00 - 23:30<br>
-        <b>Miércoles:</b>          12:00 - 23:30<br>
-        <b>Jueves:</b>                12:00 - 23:30<br>
-        <b>Viernes:</b>               12:00 - 23:30<br>
-        <b>Sabado:</b>              12:00 - 23:30<br>
-        <b>Domingo:</b>          12:00 - 23:30<br></p>
-
-
-
-
-    </footer>
-
-</body>
-</html>
+<%- include('footer') %>     

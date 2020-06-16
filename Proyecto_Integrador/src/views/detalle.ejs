@@ -1,20 +1,20 @@
-<%- include('header') %>
+<%- include('./partials/header') %> 
 
 <link rel="stylesheet" href="stylesheets/detalle.css">
    
    <h1>Detalle del Producto</h1>
     <div class="pr-media-container">
         <div class="img-pr-det-cont">
-             <img class="pr-det-img" src="images/fernando.jpg" alt="">
+             <img class="pr-det-img" src="<%= productId.imagen %> " alt="">
         </div>
     
     <div class="media-comprar">
         <h2 
-        class="pr-det-nombre">Fernet Branca 2X1</h2>
-    <h2 class="pr-det-nombre">$ 100</h2>
+        class="pr-det-nombre"><%= productId.product %> </h2>
+    <h2 class="pr-det-nombre"><%= productId.precio %> </h2>
     <div class="icon-container">
     <div class="icon-img-tarj-container">
-        <img class="icon-tarjeta" src="images/tarjeta detalle.jpg" alt="">
+        <img class="icon-tarjeta" src="/images/tarjeta.png" alt="">
     </div>
     <div class="tarjeta-txt">
     <p>Paga con tu tarjeta en hasta 12 cuotas</p>
@@ -22,7 +22,7 @@
     </div>
 <div class="icon-container">
     <div class="icon-img-container">
-    <img class="icon" src="images/small-truck.png" alt="">
+    <img class="icon" src="/images/small-truck.png" alt="">
 </div>
     <div class="envio">
     <p>Envio a domicilio</p> 
@@ -35,14 +35,14 @@
     </div>
     <div class="icon-container">
     <div class="icon-img-container">
-        <img class="icon" src="images/star.png" alt="">
+        <img class="icon" src="/images/star.png" alt="">
     </div>
         <div class="opinion-txt">
         <p>Opiniones</p>
     </div>
     </div>
     <div class="cant-container">
-        <p class="cant-prod">Cantidad de unidades</p>
+        <p class="cant-prod"><%= productId.unidadesDisponibles %> </p>
         <div class="nro-cant">
         </div>
             <button class="btn-cant">+</button>
@@ -54,7 +54,7 @@
 </div>
 <div class="pr-descripcion">
     <h2>Descripción</h2>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus assumenda tempore recusandae magni autem consequatur, quis repellendus expedita, voluptatibus praesentium deleniti nesciunt quae accusamus aliquid quibusdam cumque eligendi dolorem ratione.</p>    
+<p><%= productId.descripcion %> 
 </div>
 <div class="otros-prod-container">
 <p><b class="tit-extra-prod">Tambien podria interesarte</b></p>
@@ -115,4 +115,4 @@
 </div>
 </div>
 
-<%- include('footer') %>     
+<%- include('./partials/footer') %>  

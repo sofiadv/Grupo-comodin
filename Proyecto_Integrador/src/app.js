@@ -3,9 +3,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const methodOverride = require('method-override');
+const session = require('express-session')
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+//Require de rutas
+
+let rutasMain = require('./routes/main');
+let rutasProduct = require('./routes/product');
+let rutasUsers = require('./routes/users');
+let logMiddleware = require('./middlewares/logMiddleware');
 
 var app = express();
 
@@ -18,9 +24,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
+app.use(methodOverride('_method'))
+app.use(logMiddleware)
+app.use(session({secret:'uololo'}))
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+// Rutas
+
+app.use('/', rutasMain);
+app.use('/products', rutasProduct);
+app.use('/users', rutasUsers);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

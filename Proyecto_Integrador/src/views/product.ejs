@@ -1,0 +1,19 @@
+<%- include('./partials/header') %>
+
+<div class="art-container">
+    <% for (let i = 0; i < productos.length; i++) { %>
+    <article class="art1">
+
+        <div class="producto">
+            <a href="/products/detail/<%= productos[i].id %> ">
+            <img src="<%= productos[i].imagen %>" alt="" class="foto-producto">
+            </a>
+            <h2><%= productos[i].product %></h2>
+            <p><%= productos[i].descripcion %></p>
+        </div>
+
+
+    </article>
+    <% } %>
+
+    <%- include('./partials/footer') %> 

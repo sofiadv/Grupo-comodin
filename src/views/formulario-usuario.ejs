@@ -1,0 +1,48 @@
+<%- include('./partials/header') %> 
+        
+    <link rel="stylesheet" href="../stylesheets/formularios.css">
+    <div class="container formulario">
+        <div >
+            <% if (typeof errors != 'undefined')  {%>
+                <ul>
+                    <% for (let i = 0; i < errors.length; i++) {%> 
+                        <li> <%= errors[i].msg %>  </li>
+                    <% } %> 
+                </ul>
+            <% } %>
+            <h1 class="titulo-formulario">Complete sus datos</h1>
+            
+            <form class = "" action="/users/register" method="POST" enctype="multipart/form-data" >
+                
+                <div class="row formulario-grande"> 
+                        <div class="">
+                            <label for="nombre" class="formulario-label">Nombre de Usuario:</label>
+                            <input type="text" name="nombre" id="nombre" class="formulario-input-usuario">
+                        </div>
+                        <div >
+                            <label for="email" class="formulario-label">Email:</label>
+                            <input type="email" name="email" id="email" class="formulario-input-usuario">
+                        </div>
+                        <div >
+                            <label for="password" class="formulario-label">Contraseña:</label>
+                            <input type="password" name="password" id="password" class="formulario-input-usuario">
+                        </div>
+                        <div >
+                            <label for="repassword" class="formulario-label">Reingrese su contraseña:</label>
+                            <input type="password" name="repassword" id="repassword" class="formulario-input-usuario">
+                        </div>
+                        <div>
+                            <input type="file" name="avatar">
+                        </div>
+                        <div>
+                            <button type="submit" class="registrar-boton">Crear Usuario</button>
+                        </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <%- include('./partials/footer') %> 
+    
+</body>
+
+</html>

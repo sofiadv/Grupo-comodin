@@ -1,0 +1,118 @@
+<%- include('./partials/header') %> 
+
+<link rel="stylesheet" href="stylesheets/detalle.css">
+   
+   <h1>Detalle del Producto</h1>
+    <div class="pr-media-container">
+        <div class="img-pr-det-cont">
+             <img class="pr-det-img" src="<%= productId.imagen %> " alt="">
+        </div>
+    
+    <div class="media-comprar">
+        <h2 
+        class="pr-det-nombre"><%= productId.product %> </h2>
+    <h2 class="pr-det-nombre"><%= productId.precio %> </h2>
+    <div class="icon-container">
+    <div class="icon-img-tarj-container">
+        <img class="icon-tarjeta" src="/images/tarjeta.png" alt="">
+    </div>
+    <div class="tarjeta-txt">
+    <p>Paga con tu tarjeta en hasta 12 cuotas</p>
+</div>
+    </div>
+<div class="icon-container">
+    <div class="icon-img-container">
+    <img class="icon" src="/images/small-truck.png" alt="">
+</div>
+    <div class="envio">
+    <p>Envio a domicilio</p> 
+</div>
+    <input class="btn-logistica" type="checkbox">
+    <div class="retiro">
+<p>Retiro en el local</p>
+    </div>
+    <input class="btn-logistica" type="checkbox">
+    </div>
+    <div class="icon-container">
+    <div class="icon-img-container">
+        <img class="icon" src="/images/star.png" alt="">
+    </div>
+        <div class="opinion-txt">
+        <p>Opiniones</p>
+    </div>
+    </div>
+    <div class="cant-container">
+        <p class="cant-prod"><%= productId.unidadesDisponibles %> </p>
+        <div class="nro-cant">
+        </div>
+            <button class="btn-cant">+</button>
+            <button class="btn-cant">-</button>
+    </div>
+    <button class="btn-compra" type="submit">Comprar ahora</button>
+    <button class="btn-compra" type="submit">Agregar al carrito</button>
+</div>
+</div>
+<div class="pr-descripcion">
+    <h2>Descripción</h2>
+<p><%= productId.descripcion %> 
+</div>
+<div class="otros-prod-container">
+<p><b class="tit-extra-prod">Tambien podria interesarte</b></p>
+</div>
+<div class="interes-container">
+<div class="otros-prod">
+    <img class="img-otros-prod" src="images/birran.jpg" alt="">
+    <div class="extra-prod">
+    <p>
+        <b>Cerveza artesanal   $50</b><br>
+       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, consectetur?
+    </p>
+</div>
+</div>
+<div class="otros-prod">
+    <img class="img-otros-prod" src="images/birran.jpg" alt="">
+    <div class="extra-prod">
+    <p>
+        <b>Cerveza artesanal   $50</b><br>
+       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, consectetur?
+    </p>
+</div>
+</div>
+
+<div class="otros-prod">
+    <img class="img-otros-prod" src="images/birran.jpg" alt="">
+    <div class="extra-prod">
+    <p>
+        <b>Cerveza artesanal   $50</b><br>
+       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, consectetur?
+    </p>
+</div>
+</div>
+</div>
+<p><b class="tit-extra-prod">Preguntas al vendedor</b></p>
+
+<div class="extra-prod">
+    <p>
+        <b>si compro hoy cuando llega? </b> userId<br>
+       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, consectetur?
+    </p>
+</div>
+
+<div class="extra-prod">
+    <p>
+        <b class="tit-extra">si compro hoy cuando llega?</b> userId<br>
+       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, consectetur?
+    </p>
+</div>
+<div class="reseñas">
+<p><b class="tit-extra-prod">Reseñas</b></p>
+
+<div class="extra-prod">
+    <p>
+        <b>Excelente vendedor </b> userId<br>
+       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, consectetur?
+    </p>
+</div>
+</div>
+
+<%- include('./partials/footer') %>  

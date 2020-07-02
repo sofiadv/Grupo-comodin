@@ -144,8 +144,12 @@ section{
 
 /*Productos*/
 
+.artbox{
+    width: 50%;
+    height: 500px;
+}
 article{
-    width: 80%;
+    width: 100%;
     align-self:center;
     margin-top: 5%;
     margin-left: 10%;

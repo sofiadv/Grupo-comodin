@@ -2,6 +2,7 @@ const fs = require('fs')
 var express = require('express');
 var router = express.Router();
 const path = require('path')
+const authMiddleware = require('../middlewares/auth')
 const multer = require('multer')
 let { check, validationResult, body} = require('express-validator');
 
@@ -26,7 +27,7 @@ const productController = require('../controllers/productController')
 router.get('/detail/:idProduct/', productController.detail);
 router.get('/pruebas', productController.pruebas);
 router.get('/', productController.products);
-router.get('/create', productController.create);
+router.get('/create', authMiddleware, productController.create);
 router.post('/create', upload.any() ,productController.guardar);
 router.get('/edit/:idProduct', productController.editar)
 router.put('/edit/:idProduct', productController.editado)

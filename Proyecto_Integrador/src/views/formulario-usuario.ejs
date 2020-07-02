@@ -3,9 +3,16 @@
     <link rel="stylesheet" href="../stylesheets/formularios.css">
     <div class="container formulario">
         <div >
+            <% if (typeof errors != 'undefined')  {%>
+                <ul>
+                    <% for (let i = 0; i < errors.length; i++) {%> 
+                        <li> <%= errors[i].msg %>  </li>
+                    <% } %> 
+                </ul>
+            <% } %>
             <h1 class="titulo-formulario">Complete sus datos</h1>
             
-            <form class = "" action="/users/register" method="POST" >
+            <form class = "" action="/users/register" method="POST" enctype="multipart/form-data" >
                 
                 <div class="row formulario-grande"> 
                         <div class="">
@@ -23,6 +30,9 @@
                         <div >
                             <label for="repassword" class="formulario-label">Reingrese su contraseña:</label>
                             <input type="password" name="repassword" id="repassword" class="formulario-input-usuario">
+                        </div>
+                        <div>
+                            <input type="file" name="avatar">
                         </div>
                         <div>
                             <button type="submit" class="registrar-boton">Crear Usuario</button>

@@ -1,0 +1,39 @@
+<%- include('./partials/header') %> 
+
+
+
+
+
+<section>
+    <% if (typeof errors != 'undefined')  {%>
+        <ul>
+            <% for (let i = 0; i < errors.length; i++) {%> 
+                <li> <%= errors[i].msg %>  </li>
+
+            <% } %> 
+        </ul>
+    <% } %> 
+    <% if (typeof contra != 'undefined')  {%>
+        <ul> 
+                <li> <%= contra %>  </li>
+        </ul>
+    <% } %> 
+
+<h1>Iniciar Sesión</h1>
+
+<form action="/users/auth" method="POST">
+
+<label>E-mail</label>
+<input type="email" name="email" id=""> 
+
+<label>Contraseña</label>
+<input type="password" name="password">
+
+<input type="submit" value="Enviar">
+
+
+</form>
+
+</section>
+
+<%- include('./partials/footer') %> 

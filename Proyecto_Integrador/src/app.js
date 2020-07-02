@@ -26,7 +26,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride('_method'))
 app.use(logMiddleware)
-app.use(session({secret:'uololo'}))
+app.use(session({secret:'cuca'}))
 
 // Rutas
 

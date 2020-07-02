@@ -2,6 +2,7 @@ const fs = require('fs')
 var express = require('express');
 var router = express.Router();
 const path = require('path')
+const authMiddleware = require('../middlewares/auth')
 const multer = require('multer')
 let { check, validationResult, body} = require('express-validator');
 let rutaJson = path.join (__dirname,'../data/usersDataBase.json');
@@ -27,7 +28,7 @@ const usersController = require('../controllers/usersController')
 /* Rutas y controllers. */
 router.get('/', usersController.listar)
 router.get('/register', usersController.register)
-router.post('/register', [
+router.post('/register', upload.any(),[
     check('nombre').not().isEmpty().withMessage('Este campo es obligatorio'),  
     check('email').isEmail().withMessage('Este campo debe contener un Email'), 
     check('password').isLength({min: 8}).withMessage('La contraseña debe tener por lo menos 8 dígitos'), 
@@ -46,6 +47,7 @@ router.post('/auth', [
       check('email').isEmail().withMessage('Este campo debe contener un Email'),
       check('password').not().isEmpty().withMessage('Contraseña erronea')], 
       usersController.auth)
+router.get('/profile/:id', authMiddleware, usersController.profile)
 
 
 module.exports = router;

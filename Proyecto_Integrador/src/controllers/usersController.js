@@ -25,6 +25,7 @@ let usersController = {
                 newUser.nombre = req.body.nombre;
                 newUser.email = req.body.email;
                 newUser.password = bcrypt.hashSync(req.body.password);
+                newUser.avatar = req.files[0].filename
         let newUserDB = [...usuarios, newUser]
         fs.writeFileSync(rutaJson ,JSON.stringify(newUserDB, null, ' '))
         res.redirect('/users')
@@ -35,23 +36,29 @@ let usersController = {
     },
     login: (req, res) => res.render('login'),
     auth: (req, res, next) => {
-        let errors = validationResult(req);
+        let validation = validationResult(req);
+        let errors = validation.errors
         let usuarioEncontrado = usuarios.find( usuario => req.body.email == usuario.email)  
-        if (typeof usuarioEncontrado != 'undefined' && errors.isEmpty()){   
+        if (typeof usuarioEncontrado != 'undefined' && validation.isEmpty()){   
         let autorizado = bcrypt.compareSync(req.body.password, usuarioEncontrado.password)
             if (autorizado) {
-                res.redirect('/usuario/profile')
+                req.session.userId = usuarioEncontrado.id
+                res.redirect('/users')
             }
             else{
-                res.render("login", {errors: 'Contraseña incorrecta'})
+                res.render("login", {contra: 'Contraseña incorrecta'})
             }
         }
         else {
-            res.render('login', {errors: errors.errors})
+            res.render('login', {errors})
         }
     
     },
     listar: (req,res,next) => res.send(usuarios),
+    profile: (req, res, next) => {
+        let usuarioEncontrado = usuarios.find( usuario => req.session.userId == usuario.id)
+        res.render('profile', {usuarioEncontrado})
+    }
 };
 
 module.exports = usersController;
